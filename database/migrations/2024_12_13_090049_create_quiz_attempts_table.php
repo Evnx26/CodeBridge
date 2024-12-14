@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('quiz_attempts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('quiz_id')->constrained('quizzes')->onDelete('cascade');
-            $table->foreier('score')->default(0);
-            $table->timesgnId('user_id')->constrained('users')->onDelete('cascade');
-            $table->integtamp('attempted_at')->useCurrent();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->integer('score')->default(0);
+            $table->timestamp('attempted_at')->useCurrent();
             $table->timestamps();
         });
     }

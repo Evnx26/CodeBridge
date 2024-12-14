@@ -14,8 +14,25 @@
                 <h5 class="card-text jersey_font text-white">coding in a simple, enjoyable, and stressfree manner</h5> <br>
             </div>
         </div>
-        <div class="bg-dark">
-
+        <div class="container mt-3">
+            <div class="row">
+                @foreach($courses as $course)
+                    <div class="col-md-4 mb-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ $course->logo }}" class="card-img-top" alt="Course Logo">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $course->title }}</h5>
+                                <p class="card-text">{{ $course->description }}</p>
+                                <a href="" class="btn btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <a href="" class="btn btn-outline-primary btn-lg">View All Courses</a>
+            </div>
         </div>
+        
     </div>
 @endsection

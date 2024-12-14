@@ -1,0 +1,11 @@
+
+.navbar-nav .nav-item .nav-link {
+    font-family: 'Jersey 10', sans-serif !important; 
+    font-size: 30px; 
+    text-transform: uppercase; 
+    margin-right: 1.5rem;
+}
+
+.jersey_font{
+    font-family: 'Jersey 10', sans-serif !important; 
+}
